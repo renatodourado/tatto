@@ -1,0 +1,371 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* CSS HEADER */
+
+header{
+    height: 150px;
+    background-color:  rgb(7, 7, 7);
+    
+}
+
+.header{
+    height: 150px;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+   
+}
+.logo img{  
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 20%;
+    margin-top: 10px;
+}
+
+.menu-opener{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.menu ul,
+.menu li{
+    list-style: none;   
+   
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu li a{
+    color: rgb(143, 78, 204);
+    text-transform: uppercase;
+    font-weight: 400;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+     
+
+}
+.menu li a:hover{
+    border-bottom: 2px solid rgb(82, 67, 55);
+    color: rgb(201, 170, 201);
+}
+
+/* CSS BANNER */
+
+.banner{
+    height: calc(100vh - 150px);
+    background-color: yellow;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+.banner .sliders{
+    width: 1000vw;
+    height: 100%;
+
+}
+
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.banner .slide_area{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    color: rgba(255, 252, 249, 0.952);
+}
+
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: 5%;
+}
+
+/* CSS DEFAULT */
+
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title,
+.default .section-desc{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.default .section-title{
+    font-size: 31px;
+    font-weight: bold;
+}
+
+.default .section-desc{
+    font-size: 13px;
+    color: rgb(14, 13, 14);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.default .section-body{
+    max-width: 1140px;
+    margin: auto;
+    
+}
+
+.default.light{
+    background-color:whitesmoke;
+}
+
+.default.light .section-title,
+.default.light .section-body{
+    color: rgb(14, 13, 14);
+}
+
+.default.dark{
+    background-color: rgb(20, 18, 22);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.default.dark .section-title,
+.default.dark .section-body{
+    color: whitesmoke;
+}
+
+
+/* CSS QUEM SOMOS */
+
+.quemSomos{
+    display: flex;
+}
+
+.quemSomos-left{
+    flex: 1;
+    margin-right: 30px;
+}
+
+.quemSomos-left p{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.quemSomos-right video{
+    width: 500px; 
+    height: 275px;
+    box-shadow: 0px 5px 10px #333;
+    text-align: center;
+}
+
+
+/* CSS Nosso Trabalho */
+
+.section-photos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    
+    
+}
+
+.section-body-photo{
+    width: 350px;
+}
+
+.section-body-photoarea{
+    margin: 10px;
+    width: 330px;
+    height: auto;
+    transition: ease-in-out, 1s;
+}
+
+.section-body-photoarea img{
+    width: inherit;
+    height: inherit;
+}
+
+.section-info h5{
+    font-size: 30px;
+}
+
+.section-body-photoarea:hover{
+  transform: scale(1.03);
+  transition: ease-in-out, 1s;
+    
+}
+
+
+/* CSS DE LOCALIZAÇÃO */
+
+.section-desc{
+    color: rgb(14, 13, 14);
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CSS DE CONTATO   */
+
+#contato{
+    display: flex;
+    flex-direction: column;    
+}
+
+.contatos i{
+    color: whitesmoke;
+    font-size: 30px;    
+    margin: 30px;
+    cursor: pointer;
+    transition: ease-in-out 1s;
+}
+
+.contatos i:hover{
+    transform: scale(1.02);
+    transition: ease-in-out 0.2s;
+    color: rgb(143, 78, 204);
+}
+
+footer{
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(20, 18, 22);
+    color: whitesmoke;
+    padding-bottom: 15px;
+}
+
+
+
+
+/* MEDIA QUERYS */
+
+@media(min-width:320px) and (max-width:880px) {
+    header{
+        height: 200px;
+    }
+    
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        width: 20%;
+        top:20px;
+        right: 20px;
+    }
+
+    .logo {
+        margin-top: 20px;
+
+    }
+    .menu-opener{
+        display: block;
+        color: blueviolet;
+        font-size: 25px;
+        margin-right: 5%;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .menu ul li{
+        margin-bottom: 10%;
+        margin-right: 5%;
+        display: flex;
+       justify-content: flex-end;
+    }
+
+    .slide_area h1{
+        font-size: 35px;
+    }
+
+    /* CSS BANNER */
+
+
+    .quemSomos{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quemSomos-left{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+    }
+    
+    .quemSomos-right video{
+       display: flex;
+       width: 100%;
+       height: 100%;       
+       align-items: center;
+       justify-content: center;   
+       margin: auto;
+      
+    }
+
+    /* CSS LOCALIZAÇÃO */
+    
+    .map{
+        margin: 10%;
+    }
+}
+
+
+@media(max-width:450px){
+
+    .slide_area h1{
+        font-size: 25px;
+    }
+
+    .section-body-photo{
+        width:auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 3%;
+   }
+
+   .section-body-photoarea{
+       margin: auto;
+       width: 100%;
+   }
+
+}
+
